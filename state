@@ -1,0 +1,15 @@
+LIST StressLevel = (normal=1), stressed=2, psychotic=3
+
+LIST Items = plasma_cutter, level_3_access_card, first_aid_kit, torch
+
+LIST location = (criobay1), criobay2, criobay3, criobay4, criobay5, criobay6, criobay7, criobay8, engine_room, bridge, comms, reactor, hangar1, hangar2, engineering, medical
+
+=== function increase_stress_level(ref level)
+    { level < normal:
+        ~level ++
+    }
+
+=== function decrease_stress_level(ref level)
+    { level > normal:
+        ~level --
+    }
